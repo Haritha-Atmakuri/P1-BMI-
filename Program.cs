@@ -97,7 +97,7 @@ namespace p1
                 var product = Console.ReadLine();
                 if(product == "y")
                 {
-                   Console.WriteLine("The cost for the product is 2 dollars. Please enter no of quantity or 'q' to quit");
+                   Console.WriteLine("The cost for the product is 2 dollars. \n Please enter no of quantity or 'q' to quit");
                    var quantity = Console.ReadLine();
                    if(quantity != "q")
                    {
