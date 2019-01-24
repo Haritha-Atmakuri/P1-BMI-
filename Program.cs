@@ -93,22 +93,22 @@ namespace p1
            
             if(bmiValue == "UNDERWEIGHT")
             {
-                Console.WriteLine("You are UNDERWEIGHT.In order to be fit we recommened you to use this product\n If you would like to buy this product click 'Y' or else enter 'q' to quit");
+                Console.WriteLine($"You are {bmiValue}.\n In order to be fit we recommened you to use this product.\n If you would like to buy this product click 'Y' or else enter 'q' to quit.");
                 var product = Console.ReadLine();
                 if(product == "y")
                 {
-                   Console.WriteLine("The cost for the product is 2 dollars. \n 1.Please enter no of quantity or 'q' to quit");
+                   Console.WriteLine("The cost for the product is 2 dollars. \n 1.Please enter no of quantity or 'q' to quit.");
                    var quantity = Console.ReadLine();
                    if(quantity != "q")
                    {
                    cost = 2 * Convert.ToInt32(quantity);
                    }
                   if(quantity == "q")
-            {
+                 {
                 Console.WriteLine("DONE!");
                 checkAgain = false;
                 break;
-            }
+                 }
                 }
                 else if(product == "q")
             {
@@ -116,12 +116,12 @@ namespace p1
                 checkAgain = false;
                 break;
             }
-            Console.WriteLine($"Your order has been placed succesfully with an amount of: {cost} dollars");
+            Console.WriteLine($"Your order has been placed succesfully with an amount of: {cost} dollars.");
             }
             
             if(bmiValue == "NORMAL")
             {
-                Console.WriteLine("You are perfectly fit and we recommend you to follow the same diet to maintain this.");
+                Console.WriteLine("You are perfectly fit and we recommend you to follow the same diet to be healthy like this.");
             }
 
             if(bmiValue == "OVERWEIGHT" || bmiValue == "OBESE")
@@ -149,7 +149,7 @@ namespace p1
                 checkAgain = false;
                 break;
             }
-            Console.WriteLine($"Your order has been placed succesfully with an amount of: {cost} dollars");
+            Console.WriteLine($"Your order has been placed succesfully with an amount of: {cost} dollars.");
             }
             
             Console.WriteLine("Enter 'y' to check again or 'q' to quit");
