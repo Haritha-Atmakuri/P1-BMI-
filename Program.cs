@@ -97,7 +97,7 @@ namespace p1
                 var product = Console.ReadLine();
                 if(product == "y")
                 {
-                   Console.WriteLine("The cost for the product is 2 dollars. \n Please enter no of quantity or 'q' to quit");
+                   Console.WriteLine("The cost for the product is 2 dollars. \n 1.Please enter no of quantity or 'q' to quit");
                    var quantity = Console.ReadLine();
                    if(quantity != "q")
                    {
@@ -126,11 +126,11 @@ namespace p1
 
             if(bmiValue == "OVERWEIGHT" || bmiValue == "OBESE")
             {
-                Console.WriteLine("You are Overweight.In order to become thin we recommened you to use this product\n If you would like to buy this product click 'Y' or else enter 'q' to quit");
+                Console.WriteLine($"You are {bmiValue}.\n In order to become thin we recommened you to use this product.\n If you would like to buy this product click 'Y' or else enter 'q' to quit");
                 var product = Console.ReadLine();
                 if(product == "y")
                 {
-                   Console.WriteLine("The cost for the product is 8 dollars. Please enter no of quantity or 'q' to quit");
+                   Console.WriteLine("The cost for the product is 8 dollars. \n 1.Please enter no of quantity or 'q' to quit");
                    var quantity = Console.ReadLine();
                    if(quantity!= "q")
                    {
