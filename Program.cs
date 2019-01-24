@@ -4,6 +4,10 @@ namespace p1
 {
     class Program
     {
+        static double calculateBmi(double weight, int height)
+        {
+        return weight / ( ( height / 100.0 ) * ( height / 100.0 ) );
+        }
         static void Main(string[] args)
         {
             var name = "";
@@ -13,7 +17,7 @@ namespace p1
             var bmiValue = "";
             var gender = "";
             var checkAgain = true;
-
+            var cost = 0.0m;
             
             while(checkAgain)
             {
@@ -43,7 +47,8 @@ namespace p1
             }
              Console.WriteLine("Enter your gender as 'm' or 'f':");
              gender = Console.ReadLine();
-            bmi = weight / ( ( height / 100.0 ) * ( height / 100.0 ) );
+
+            bmi = calculateBmi(weight,height);
             Console.WriteLine($"You bmi is: {bmi}");
             switch(gender){
             case "m":
@@ -84,8 +89,68 @@ namespace p1
             break;
             }
             Console.WriteLine($"Your weight status is {bmiValue}");
-            
            
+            if(bmiValue == "UNDERWEIGHT")
+            {
+                Console.WriteLine("You are UNDERWEIGHT.In order to be fit we recommened you to use this product\n If you would like to buy this product click 'Y' or else enter 'q' to quit");
+                var product = Console.ReadLine();
+                if(product == "y")
+                {
+                   Console.WriteLine("The cost for the product is 2 dollars. Please enter no of quantity or 'q' to quit");
+                   var quantity = Console.ReadLine();
+                   if(quantity != "q")
+                   {
+                   cost = 2 * Convert.ToInt32(quantity);
+                   }
+                  if(quantity == "q")
+            {
+                Console.WriteLine("DONE!");
+                checkAgain = false;
+                break;
+            }
+                }
+                else if(product == "q")
+            {
+                Console.WriteLine("DONE!");
+                checkAgain = false;
+                break;
+            }
+            Console.WriteLine($"Your order has been placed succesfully with an amount of: {cost} dollars");
+            }
+            
+            if(bmiValue == "NORMAL")
+            {
+                Console.WriteLine("You are perfectly fit and we recommend you to follow the same diet to maintain this.");
+            }
+
+            if(bmiValue == "OVERWEIGHT" || bmiValue == "OBESE")
+            {
+                Console.WriteLine("You are Overweight.In order to become thin we recommened you to use this product\n If you would like to buy this product click 'Y' or else enter 'q' to quit");
+                var product1 = Console.ReadLine();
+                if(product1 == "y")
+                {
+                   Console.WriteLine("The cost for the product is 8 dollars. Please enter no of quantity or 'q' to quit");
+                   var quantity1 = Console.ReadLine();
+                   if(quantity1 != "q")
+                   {
+                   cost = 8 * Convert.ToInt32(quantity1);
+                   }
+                  if(quantity1 == "q")
+            {
+                Console.WriteLine("DONE!");
+                checkAgain = false;
+                break;
+            }
+                }
+                else if(product1 == "q")
+            {
+                Console.WriteLine("DONE!");
+                checkAgain = false;
+                break;
+            }
+            Console.WriteLine($"Your order has been placed succesfully with an amount of: {cost} dollars");
+            }
+            
             Console.WriteLine("Enter 'y' to check again or 'q' to quit");
             var checking = Console.ReadLine();
             if(checking == "q")
