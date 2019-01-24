@@ -18,6 +18,7 @@ namespace p1
             var gender = "";
             var checkAgain = true;
             var cost = 0.0m;
+            var END_CHAR='q';
             
             while(checkAgain)
             {
@@ -126,23 +127,23 @@ namespace p1
             if(bmiValue == "OVERWEIGHT" || bmiValue == "OBESE")
             {
                 Console.WriteLine("You are Overweight.In order to become thin we recommened you to use this product\n If you would like to buy this product click 'Y' or else enter 'q' to quit");
-                var product1 = Console.ReadLine();
-                if(product1 == "y")
+                var product = Console.ReadLine();
+                if(product == "y")
                 {
                    Console.WriteLine("The cost for the product is 8 dollars. Please enter no of quantity or 'q' to quit");
-                   var quantity1 = Console.ReadLine();
-                   if(quantity1 != "q")
+                   var quantity = Console.ReadLine();
+                   if(quantity!= "q")
                    {
-                   cost = 8 * Convert.ToInt32(quantity1);
+                   cost = 8 * Convert.ToInt32(quantity);
                    }
-                  if(quantity1 == "q")
+                  if(quantity== "q")
             {
                 Console.WriteLine("DONE!");
                 checkAgain = false;
                 break;
             }
                 }
-                else if(product1 == "q")
+                else if(product == "q")
             {
                 Console.WriteLine("DONE!");
                 checkAgain = false;
@@ -153,7 +154,8 @@ namespace p1
             
             Console.WriteLine("Enter 'y' to check again or 'q' to quit");
             var checking = Console.ReadLine();
-            if(checking == "q")
+            END_CHAR=Convert.ToChar(checking);
+            if(END_CHAR=='q')
             {
                 Console.WriteLine("DONE!");
                 checkAgain = false;
