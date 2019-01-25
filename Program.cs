@@ -4,14 +4,14 @@ namespace p1
 {
     class Program
     {
-        static double calculateBmi(double weight, double height)
+        static double calculateBmi(double weight, int height)
           {
              return weight / ( ( height / 100.0 ) * ( height / 100.0 ) );
           }
             static void Main(string[] args)
            {
                   var name = "";
-                  var height = 0.0;
+                  var height = 0;
                   var weight = 0.0;
                   var bmi = 0.0;
                   var bmiValue = "";
@@ -31,7 +31,7 @@ namespace p1
                              }
                             Console.WriteLine($"Hello {name}\n********\nWelcome to BMI CALCULATOR APP\n*************");
                             Console.WriteLine("Please enter your height in cms:");
-                            height = Convert.ToDouble(Console.ReadLine());
+                            height = Convert.ToInt32(Console.ReadLine());
                              while(height <= 0 || height.ToString() == "" )
                                {
                                   Console.WriteLine("Please enter valid height to proceed forward");
