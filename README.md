@@ -1,6 +1,7 @@
 # P1-BMI-
 
-My application calculates Body Mass Index of a person.\n First it takes height and weight of a person based on those both it calculates the  Body mass Index. \n And then based on the body mass Index value we will them whether they are Underweight,Normal,Overweight,obese. \n And people who are underweight,  Overweight, Obese we will ask them to whether they want to buy product to fit.\n  If they want they will  click yes and ask them how many quantities they want based on the no of quantities we will tell them cost of the Product.\n If they don't want to buy they will click 'q'(quit) to exit from the app.
+My application calculates Body Mass Index of a person.
+First it takes height and weight of a person based on those both it calculates the  Body mass Index.And then based on the body mass Index value we will them whether they are Underweight,Normal,Overweight,obese.And people who are underweight,  Overweight, Obese we will ask them to whether they want to buy product to fit.If they want they will  click yes and ask them how many quantities they want based on the no of quantities we will tell them cost of the Product.If they don't want to buy they will click 'q'(quit) to exit from the app.
 
 ![screenshot 235](https://user-images.githubusercontent.com/42945822/51718207-e62cc900-2009-11e9-8a9d-c0a88382a9cf.png)
 
